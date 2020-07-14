@@ -1,0 +1,170 @@
+.slider
+{
+    text-align: center;
+    q
+    {
+        padding: 10px 50px;
+        display: block;
+        margin: 20px;
+        font: {
+            size: 24px;
+            style: italic;
+            weight: bold;
+        };
+
+    }
+    .image{
+        width: 100%;
+        height: 480px;
+        overflow: hidden;
+        img{
+            
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    ul
+    {
+        text-align: center;
+
+       li{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $graycolor;
+            border: 2px solid $graycolor;
+            &.active,
+            &:hover{
+                background: #ffffff;
+                border: 2px solid #333;
+            }
+
+        }
+    }
+}
+
+// start services 
+.myservse 
+{
+    margin: 40px 0;
+    .h3
+    {
+        color: $secoundcolor;
+        i
+        {
+            color: $graycolor;
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 2.1rem;
+            
+        }
+    }
+    p{
+        color: $graycolor;
+    }
+    a
+    {
+        text-decoration: none;
+        color: $maincolor;
+        position: relative;
+        text-transform: capitalize;
+        
+        &::after
+        {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f105";   
+            margin-left:5px;
+        }
+    }
+}
+// start our team 
+
+.our-team
+{
+    padding: 60px 0;
+    .gird-team
+    {
+        margin: 50px 0;
+        display: grid;
+
+        grid-gap:10px;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+
+        .image
+        {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+
+            img{
+                max-width: 100%;
+                background-size: cover;
+                @include prefixer(transition,all 0.2s linear,webkit moz);
+                filter: grayscale(1);   
+                @include prefixer(transform,scale(1.1),webkit moz o ms);             
+            } 
+            &:hover 
+            {
+                img
+                {
+                   filter: grayscale(0); 
+                   @include prefixer(transform,scale(1),webkit moz o ms);   
+                      
+                }  
+            }    
+          
+        }
+
+        .h3
+        {
+            font-size: 1.1rem;
+            span{
+                color: $secoundcolor;
+            }
+        }
+        a{
+            text-decoration: none;
+            color: $maincolor;
+            text-transform: capitalize;
+            
+            &::after
+            {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\f105";   
+                margin-left:5px;
+            }
+        }
+    }
+}
+
+// start section loream ipsoum 
+
+.section
+{
+   .flex-grid
+   {
+       display: flex;
+       justify-content: space-between;
+       margin: 40px 0;;
+       height: 350px;
+       overflow: hidden;
+
+       @include xsMedia{
+           flex-wrap: wrap;
+           height: auto;
+       }
+       div{
+
+           overflow: hidden;
+           margin: 0 10px;
+           img{
+               max-width: 100%;
+               overflow: hidden;
+           }
+       }
+   }
+}
